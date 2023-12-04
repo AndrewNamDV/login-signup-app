@@ -72,6 +72,12 @@
     cursor: pointer;
 }
 
+.submit-container{
+    display:flex;
+    gap: 30px;
+    margin: 60px auto;
+}
+
 .submit{
     display: flex;
     justify-self: content;

@@ -1,14 +1,14 @@
 import React,{useState} from "react";
-import './loginsignup.css'
+import './LoginSignup.css'
 
 import user_icon from '../assets/person.png';
 import password_icon from '../assets/password.png';
 import email_icon from '../assets/email.png';
 
 
-const loginsignup = () => {
+const LoginSignup = () => {
 
-  const[action,setAction] = useState("Sign Up");
+  const [action,setAction] = useState("Sign Up");
 
   return (
     <div className="container">
@@ -31,6 +31,7 @@ const loginsignup = () => {
         <input type="password" placeholder="Password" />
       </div>
     </div>
+    {action==="Sign Up"?<div></div>:<div className="forgot-password">Lost Password?<span>Click here!</span></div>}
     <div className="forgot-password">Lost Password?<span>Click here!</span></div>
     <div className="submit-container">
       <div className={action==="Login"?"submit gray":"submit"} onClick={()=>{setAction("Sign Up")}}>Sign Up</div>
@@ -40,4 +41,4 @@ const loginsignup = () => {
   )
 }
 
-export default loginsignup
+export default LoginSignup
